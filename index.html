@@ -58,7 +58,10 @@
               class="kitchenware grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
             >
               <!-- product 1 -->
-              <div class="card w-auto bg-base-100 shadow-xl pt-5 px-5">
+              <div
+                id="product-1"
+                class="card w-auto bg-base-100 shadow-xl pt-5 px-5"
+              >
                 <figure
                   class="px-10 py-5 rounded-xl bg-slate-300 flex justify-center items-center"
                 >
@@ -93,14 +96,17 @@
                       class="mask mask-star-2 bg-orange-400"
                     />
                   </div>
-                  <p id="K-Accessories1-name">K. Accessories</p>
+                  <p id="K-Accessories1-name">K. Accessories-1</p>
                   <p class="text-slate-400">
                     <span id="K-Accessories1-price">39.00</span> TK
                   </p>
                 </div>
               </div>
               <!-- product 2 -->
-              <div class="card w-auto bg-base-100 shadow-xl pt-5 px-5">
+              <div
+                id="product-2"
+                class="card w-auto bg-base-100 shadow-xl pt-5 px-5"
+              >
                 <figure
                   class="px-10 py-5 rounded-xl bg-slate-300 flex justify-center items-center"
                 >
@@ -135,14 +141,17 @@
                       class="mask mask-star-2 bg-orange-400"
                     />
                   </div>
-                  <p id="K-Accessories2-name">K. Accessories</p>
+                  <p id="K-Accessories2-name">K. Accessories-2</p>
                   <p class="text-slate-400">
                     <span id="K-Accessories2-price">25.00</span> TK
                   </p>
                 </div>
               </div>
               <!-- product 3 -->
-              <div class="card w-auto bg-base-100 shadow-xl pt-5 px-5">
+              <div
+                id="product-3"
+                class="card w-auto bg-base-100 shadow-xl pt-5 px-5"
+              >
                 <figure
                   class="px-10 py-5 rounded-xl bg-slate-300 flex justify-center items-center"
                 >
@@ -190,7 +199,10 @@
               class="Sportswear grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
             >
               <!-- prodcut 4 -->
-              <div class="card w-auto bg-base-100 shadow-xl pt-5 px-5">
+              <div
+                id="product-4"
+                class="card w-auto bg-base-100 shadow-xl pt-5 px-5"
+              >
                 <figure
                   class="px-10 py-5 rounded-xl bg-slate-300 flex justify-center items-center"
                 >
@@ -232,7 +244,10 @@
                 </div>
               </div>
               <!-- prodcut 5 -->
-              <div class="card w-auto bg-base-100 shadow-xl pt-5 px-5">
+              <div
+                id="product-5"
+                class="card w-auto bg-base-100 shadow-xl pt-5 px-5"
+              >
                 <figure
                   class="px-10 py-5 rounded-xl bg-slate-300 flex justify-center items-center"
                 >
@@ -274,7 +289,10 @@
                 </div>
               </div>
               <!-- prodcut 6 -->
-              <div class="card w-auto bg-base-100 shadow-xl pt-5 px-5">
+              <div
+                id="product-6"
+                class="card w-auto bg-base-100 shadow-xl pt-5 px-5"
+              >
                 <figure
                   class="px-10 py-5 rounded-xl bg-slate-300 flex justify-center items-center"
                 >
@@ -322,7 +340,10 @@
               class="furniture grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
             >
               <!-- prodcut 7 -->
-              <div class="card w-auto bg-base-100 shadow-xl pt-5 px-5">
+              <div
+                id="product-7"
+                class="card w-auto bg-base-100 shadow-xl pt-5 px-5"
+              >
                 <figure
                   class="px-10 py-5 rounded-xl bg-slate-300 flex justify-center items-center"
                 >
@@ -364,7 +385,10 @@
                 </div>
               </div>
               <!-- prodcut 8 -->
-              <div class="card w-auto bg-base-100 shadow-xl pt-5 px-5">
+              <div
+                id="product-8"
+                class="card w-auto bg-base-100 shadow-xl pt-5 px-5"
+              >
                 <figure
                   class="px-10 py-5 rounded-xl bg-slate-300 flex justify-center items-center"
                 >
@@ -406,7 +430,10 @@
                 </div>
               </div>
               <!-- prodcut 9 -->
-              <div class="card w-auto bg-base-100 shadow-xl pt-5 px-5">
+              <div
+                id="product-9"
+                class="card w-auto bg-base-100 shadow-xl pt-5 px-5"
+              >
                 <figure
                   class="px-10 py-5 rounded-xl bg-slate-300 flex justify-center items-center"
                 >
@@ -441,9 +468,9 @@
                       class="mask mask-star-2 bg-orange-400"
                     />
                   </div>
-                  <p id="Children-play">Flexible Sofa</p>
+                  <p id="Flexible-Sofa">Flexible Sofa</p>
                   <p class="text-slate-400">
-                    <span id="Children-play-price">339.00</span> TK
+                    <span id="Flexible-Sofa-price">339.00</span> TK
                   </p>
                 </div>
               </div>
@@ -457,9 +484,16 @@
                 Have coupon?
               </h4>
               <div class="join">
-                <input class="join-item w-8/12 p-2" placeholder="Coupon Code" />
+                <input
+                  id="Promo-code-input"
+                  class="join-item w-8/12 p-2"
+                  placeholder="Coupon Code"
+                />
+
                 <button
+                  id="promo-apply-button"
                   class="join-item rounded-md bg-[#E527B2] text-white px-3 py-2 font-semibold"
+                  disabled
                 >
                   Apply
                 </button>
@@ -467,7 +501,7 @@
             </div>
             <!-- new item name of the cart will be added  -->
             <div id="Add-item-name" class="item-cart py-3 px-4">
-              <p>No item added</p>
+              <p id="New-Item-notification">No item added</p>
             </div>
 
             <hr />
@@ -475,13 +509,20 @@
             <div class="item-price mt-4 py-3 px-4">
               <p class="text-black">
                 Total price:
-                <span class="font-light text-gray-400">0.00</span> TK
+                <span id="total-price" class="font-light text-gray-400"
+                  >0.00</span
+                >
+                TK
               </p>
               <p class="text-black">
                 Discount: <span class="font-light text-gray-400">0.00</span> TK
               </p>
               <p class="text-black">
-                Total: <span class="font-light text-gray-400">0.00</span> TK
+                Total:
+                <span id="Final-price" class="font-light text-gray-400"
+                  >0.00</span
+                >
+                TK
               </p>
               <button
                 onclick="my_modal_5.showModal()"
@@ -504,6 +545,7 @@
                     <form method="dialog">
                       <!-- if there is a button in form, it will close the modal -->
                       <button
+                        onClick="window.location.reload()"
                         class="bg-[#E527B2] py-3 px-5 text-white rounded-md"
                       >
                         Go Home
@@ -517,5 +559,8 @@
         </div>
       </div>
     </section>
+
+    <script src="js/utilities.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
