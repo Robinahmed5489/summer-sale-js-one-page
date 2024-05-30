@@ -7,6 +7,7 @@ document.getElementById("product-1").addEventListener("click", function () {
 
   setDataById("total-price", newTotalPrice);
   setDataById("Final-price", newTotalPrice);
+  enablePurchaseButton(newTotalPrice);
 });
 
 document.getElementById("product-2").addEventListener("click", function () {
@@ -18,6 +19,7 @@ document.getElementById("product-2").addEventListener("click", function () {
 
   setDataById("total-price", newTotalPrice);
   setDataById("Final-price", newTotalPrice);
+  enablePurchaseButton(newTotalPrice);
 });
 
 document.getElementById("product-3").addEventListener("click", function () {
@@ -29,6 +31,7 @@ document.getElementById("product-3").addEventListener("click", function () {
 
   setDataById("total-price", newTotalPrice);
   setDataById("Final-price", newTotalPrice);
+  enablePurchaseButton(newTotalPrice);
 });
 
 document.getElementById("product-4").addEventListener("click", function () {
@@ -40,6 +43,7 @@ document.getElementById("product-4").addEventListener("click", function () {
 
   setDataById("total-price", newTotalPrice);
   setDataById("Final-price", newTotalPrice);
+  enablePurchaseButton(newTotalPrice);
 });
 
 document.getElementById("product-5").addEventListener("click", function () {
@@ -51,6 +55,7 @@ document.getElementById("product-5").addEventListener("click", function () {
 
   setDataById("total-price", newTotalPrice);
   setDataById("Final-price", newTotalPrice);
+  enablePurchaseButton(newTotalPrice);
 });
 
 document.getElementById("product-6").addEventListener("click", function () {
@@ -62,6 +67,7 @@ document.getElementById("product-6").addEventListener("click", function () {
 
   setDataById("total-price", newTotalPrice);
   setDataById("Final-price", newTotalPrice);
+  enablePurchaseButton(newTotalPrice);
 });
 document.getElementById("product-7").addEventListener("click", function () {
   const productNameTake = getElementByIdString("Single-Relax-Chair");
@@ -72,6 +78,7 @@ document.getElementById("product-7").addEventListener("click", function () {
 
   setDataById("total-price", newTotalPrice);
   setDataById("Final-price", newTotalPrice);
+  enablePurchaseButton(newTotalPrice);
 });
 document.getElementById("product-8").addEventListener("click", function () {
   const productNameTake = getElementByIdString("Children-play");
@@ -82,6 +89,7 @@ document.getElementById("product-8").addEventListener("click", function () {
 
   setDataById("total-price", newTotalPrice);
   setDataById("Final-price", newTotalPrice);
+  enablePurchaseButton(newTotalPrice);
 });
 
 document.getElementById("product-9").addEventListener("click", function () {
@@ -93,16 +101,23 @@ document.getElementById("product-9").addEventListener("click", function () {
 
   setDataById("total-price", newTotalPrice);
   setDataById("Final-price", newTotalPrice);
+  enablePurchaseButton(newTotalPrice);
 });
 
 document
-  .getElementById("Promo-code-input")
-  .addEventListener("keyup", function (event) {
-    const eventText = event.target.value;
-    const deleteButton = document.getElementById("promo-apply-button");
-    if (eventText == "SELL200") {
-      deleteButton.removeAttribute("disabled");
+  .getElementById("promo-apply-button")
+  .addEventListener("click", function () {
+    const inputFieldValue = getInputById("Promo-code-input");
+    const getDiscountPrice = getElementByIdNumber("discount-price");
+    const getTotalProductPrice = getElementByIdNumber("total-price");
+    if (inputFieldValue == "SELL200") {
+      const discount = getTotalProductPrice * (20 / 100);
+      const discountOneDecimal = discount.toFixed(2);
+      setDataById("discount-price", discountOneDecimal);
+      const PriceAfterDiscount = getTotalProductPrice - discount;
+      const PriceAfterDiscountTwoDecimal = PriceAfterDiscount.toFixed(2);
+      setDataById("Final-price", PriceAfterDiscountTwoDecimal);
     } else {
-      deleteButton.setAttribute("disabled", true);
+      alert("You have to apply Proper valid promo code");
     }
   });

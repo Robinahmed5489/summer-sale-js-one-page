@@ -515,7 +515,11 @@
                 TK
               </p>
               <p class="text-black">
-                Discount: <span class="font-light text-gray-400">0.00</span> TK
+                Discount:
+                <span id="discount-price" class="font-light text-gray-400"
+                  >0.00</span
+                >
+                TK
               </p>
               <p class="text-black">
                 Total:
@@ -525,8 +529,10 @@
                 TK
               </p>
               <button
+                id="Purchase-button"
                 onclick="my_modal_5.showModal()"
                 class="bg-[#E527B2] py-2 px-4 w-full text-white font-semibold rounded-md mt-4"
+                disabled
               >
                 Make Purchase
               </button>
@@ -562,5 +568,6 @@
 
     <script src="js/utilities.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/disable-problem.js"></script>
   </body>
 </html>
